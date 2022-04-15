@@ -50,12 +50,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void ClimbLadder()
     {
-        if (myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
+            return;
+        }
             Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, moveInput.y * climbSpeed);
             myRigidbody.velocity = climbVelocity;
-        }
-            
     }
     void Run()
     {
