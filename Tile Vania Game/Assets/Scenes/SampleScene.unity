@@ -822,11 +822,6 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1642531775}
   m_ConfineScreenEdges: 1
   m_Damping: 0
---- !u!4 &552756386 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5946500364543181554, guid: cf2f658c71045f94b9d83868a1678406, type: 3}
-  m_PrefabInstance: {fileID: 8732845776528343979}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1045760852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1262,7 @@ GameObject:
   - component: {fileID: 1364108659}
   m_Layer: 10
   m_Name: Goober (Enemy)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15929,18 +15924,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3833784461516197121, guid: cf2f658c71045f94b9d83868a1678406, type: 3}
-      propertyPath: m_Constraints
-      value: 0
+    - target: {fileID: 5946500364543181554, guid: cf2f658c71045f94b9d83868a1678406, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.254
       objectReference: {fileID: 0}
-    - target: {fileID: 6851376179845897340, guid: cf2f658c71045f94b9d83868a1678406, type: 3}
-      propertyPath: gun
-      value: 
-      objectReference: {fileID: 552756386}
-    - target: {fileID: 6851376179845897340, guid: cf2f658c71045f94b9d83868a1678406, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 1061241464635154853, guid: 5bf7cd38f21b5244d8db7ef7f069e075, type: 3}
+    - target: {fileID: 5946500364543181554, guid: cf2f658c71045f94b9d83868a1678406, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.119
+      objectReference: {fileID: 0}
     - target: {fileID: 8732845777151119242, guid: cf2f658c71045f94b9d83868a1678406, type: 3}
       propertyPath: m_RootOrder
       value: 2
