@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D myFeetCollider;
     float gravityScalAtStart;
 
+    int score;
+    
+
     bool isAlive = true;
     
     void Start()
@@ -29,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeetCollider = GetComponent<BoxCollider2D>();
         gravityScalAtStart = myRigidbody.gravityScale;
+       
     }
 
 
@@ -41,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
         ClimbLadder();
         Die();
     }
+
+   
 
     void OnFire(InputValue value)
     {
