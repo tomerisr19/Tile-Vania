@@ -104,10 +104,7 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
         }      
     }
-
-
-
-   
+ 
     void Die()
     {
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Hazards")))
@@ -115,6 +112,7 @@ public class PlayerMovement : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             myRigidbody.velocity = deathKick;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
 }

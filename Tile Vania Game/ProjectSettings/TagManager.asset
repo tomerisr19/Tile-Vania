@@ -19,7 +19,7 @@ TagManager:
   - Enemies
   - Hazards
   - Bullets
-  - 
+  - Exit
   - 
   - 
   - 
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Hazards
     uniqueID: 949186663
+    locked: 0
+  - name: Exit
+    uniqueID: 413155579
     locked: 0
   - name: Enemies
     uniqueID: 2753363439
