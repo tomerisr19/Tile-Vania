@@ -15,15 +15,17 @@ public class LevelExit : MonoBehaviour
     }
     IEnumerator LoadNextLevel()
     {
-         yield return new WaitForSecondsRealtime(levelLoadDelay);
-         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        yield return new WaitForSecondsRealtime(levelLoadDelay);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
 
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
             nextSceneIndex = 0;
         }
-         SceneManager.LoadScene(nextSceneIndex);           
+
+        FindObjectOfType<ScenePersist>().ResetScenePersist();
+        SceneManager.LoadScene(nextSceneIndex);           
     }
     
 
